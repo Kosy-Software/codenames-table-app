@@ -39,12 +39,16 @@
 
     iframe {
         width: 100vw;
-        height: 88vh;
+        height: 80vh;
         border: 0;
     }
 
     .bottom-bar {
         width: 100%;
+
+        button {
+            margin: 16px;
+        }
     }
 
     .pop-up {
