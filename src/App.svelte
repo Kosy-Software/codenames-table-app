@@ -38,7 +38,7 @@
     }
 
     iframe {
-        width: 100%;
+        width: 100vw;
         height: 88vh;
         border: 0;
     }
@@ -51,7 +51,7 @@
         max-height: 300px;
         overflow-y: auto;
         position: absolute;
-        bottom: 15vh;
+        bottom: 12vh;
         left: 10px;
         max-width: 50%;
         background-color: white;
