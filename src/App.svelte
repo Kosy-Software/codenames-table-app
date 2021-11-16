@@ -39,7 +39,7 @@
 
     iframe {
         width: 100vw;
-        height: 80vh;
+        height: 88vh;
         border: 0;
     }
 
@@ -47,7 +47,7 @@
         width: 100%;
 
         button {
-            margin: 16px;
+            margin: 6px;
         }
     }
 
@@ -102,7 +102,7 @@
             </div>
         {/if}
         <div class="bottom-bar">
-            <Button importance="secondary" on:click={() => toggleInformation()}>
+            <Button importance="secondary" size="small" on:click={() => toggleInformation()}>
                 <img class="icon-left" src="assets/Question-icon.png" alt="question-mark" />
                 How to play
             </Button>
