@@ -25,8 +25,7 @@
     });
 
     let loadPromise = kosyApi.startApp().then((initialInfo: InitialInfo<AppState>) => {
-        const clientLocation = initialInfo.clients[initialInfo.currentClientUuid].clientLocation
-        tableUrl = `https://www.horsepaste.com/kosy_${clientLocation.building.buildingName}_${clientLocation.floor.floorName}_${clientLocation.room.roomName}_${clientLocation.table.tableName}`
+        tableUrl = `https://www.horsepaste.com/${initialInfo.locationUuid}`
     });
 
     const toggleInformation = () => informationIsOpen = !informationIsOpen;
