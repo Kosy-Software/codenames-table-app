@@ -10,7 +10,8 @@
   "dependencies": {
     "@kosy/kosy-app-api": "^0.4.1",
     "@kosy/kosy-svelte-components": "^0.1.7",
-    "@tsconfig/svelte": "^2.0.1"
+    "@tsconfig/svelte": "^2.0.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
