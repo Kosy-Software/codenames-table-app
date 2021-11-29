@@ -42,7 +42,7 @@ jobs:
         uses: jakejarvis/s3-sync-action@master
         env:
           SOURCE_DIR: dist
-          DEST_DIR: cherry
+          DEST_DIR: elderberry
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
 
       - name: Create CloudFront Cache Invalidation ☁️
