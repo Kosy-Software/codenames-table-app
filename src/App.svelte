@@ -76,7 +76,7 @@
         max-width: 50%;
         background-color: white;
         border-radius: 16px;
-        border: 1.5px solid #F6F7F9;
+        border: 1px solid #F6F7F9;
         box-shadow: 0 8px 24px 0 #cccccc40;
 
         div {
