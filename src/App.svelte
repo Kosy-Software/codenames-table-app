@@ -39,10 +39,12 @@
 
     let loadPromise = kosyApi.startApp().then((initialInfo: InitialInfo<AppState>) => {
         if (initialInfo.currentClientUuid == initialInfo.initializerClientUuid) {
-            kosyApi.relayMessage({ 
-                type: "receive-codenames-url", 
-                payload: `https://www.horsepaste.com/${initialInfo.locationUuid}_${uuidv4()}`
-            });
+            setTimeout(() =>
+                kosyApi.relayMessage({ 
+                    type: "receive-codenames-url", 
+                    payload: `https://www.horsepaste.com/${initialInfo.locationUuid}_${uuidv4()}`
+                })
+            , 500);
         }
         setState(initialInfo.currentAppState);
     });
