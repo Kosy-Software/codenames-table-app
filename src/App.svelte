@@ -15,7 +15,9 @@
 
     let setState = (newState: AppState) => {
         if (newState?.appUrl) {
-            state = newState;
+            let appUrl = newState.appUrl.split("#")[0];
+            state = { appUrl };
+            setTimeout(() => state = { appUrl: appUrl + "#end-turn-btn" }, 1000);
         }
     }
 
@@ -25,7 +27,7 @@
         onReceiveMessageAsClient: (message) => {
             switch (message.type) {
                 case "receive-codenames-url":
-                    state = { appUrl: message.payload };
+                    setState({appUrl: message.payload});
                     break;
                 default:
                     break;
@@ -39,7 +41,7 @@
         if (initialInfo.currentClientUuid == initialInfo.initializerClientUuid) {
             kosyApi.relayMessage({ 
                 type: "receive-codenames-url", 
-                payload: `https://www.horsepaste.com/${initialInfo.locationUuid}_${uuidv4()}#end-turn-btn`
+                payload: `https://www.horsepaste.com/${initialInfo.locationUuid}_${uuidv4()}`
             });
         }
         setState(initialInfo.currentAppState);
