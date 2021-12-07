@@ -39,7 +39,7 @@
         if (initialInfo.currentClientUuid == initialInfo.initializerClientUuid) {
             kosyApi.relayMessage({ 
                 type: "receive-codenames-url", 
-                payload: `https://www.horsepaste.com/${initialInfo.locationUuid}_${uuidv4()}` 
+                payload: `https://www.horsepaste.com/${initialInfo.locationUuid}_${uuidv4()}#end-turn-btn`
             });
         }
         setState(initialInfo.currentAppState);
@@ -57,6 +57,8 @@
         width: 100vw;
         height: 99vh;
         border: 0;
+        transform: scale(0.75);
+        transform-origin: 0.0;
     }
 
     h3:first-child {
