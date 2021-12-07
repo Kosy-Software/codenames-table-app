@@ -57,8 +57,6 @@
         width: 100vw;
         height: 99vh;
         border: 0;
-        transform: scale(0.75);
-        transform-origin: 0.0;
     }
 
     h3:first-child {
